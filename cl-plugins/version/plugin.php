@@ -51,7 +51,7 @@ class pluginVersion extends Plugin
 	{
 		if ($this->getValue('newVersionAlert')) {
 			// The follow Javascript get via AJAX the information about new versions
-			// The script is on /bl-plugins/version/js/version.js
+			// The script is on /cl-plugins/version/js/version.js
 			$jsPath = $this->phpPath() . 'js' . DS;
 			$scripts  = '<script>' . file_get_contents($jsPath . 'version.js') . '</script>';
 			return $scripts;

@@ -31,11 +31,11 @@ if (DEBUG_MODE) {
 
 // PHP paths
 // PATH_ROOT and PATH_BOOT are defined in index.php
-define('PATH_LANGUAGES',		PATH_ROOT . 'bl-languages' . DS);
-define('PATH_THEMES',			PATH_ROOT . 'bl-themes' . DS);
-define('PATH_PLUGINS',			PATH_ROOT . 'bl-plugins' . DS);
-define('PATH_KERNEL',			PATH_ROOT . 'bl-kernel' . DS);
-define('PATH_CONTENT',			PATH_ROOT . 'bl-content' . DS);
+define('PATH_LANGUAGES',		PATH_ROOT . 'cl-languages' . DS);
+define('PATH_THEMES',			PATH_ROOT . 'cl-themes' . DS);
+define('PATH_PLUGINS',			PATH_ROOT . 'cl-plugins' . DS);
+define('PATH_KERNEL',			PATH_ROOT . 'cl-kernel' . DS);
+define('PATH_CONTENT',			PATH_ROOT . 'cl-content' . DS);
 
 define('PATH_ABSTRACT',			PATH_KERNEL . 'abstract' . DS);
 define('PATH_RULES',			PATH_KERNEL . 'boot' . DS . 'rules' . DS);
@@ -163,24 +163,24 @@ if (strpos($_SERVER['REQUEST_URI'], $base) !== 0) {
 }
 
 define('HTML_PATH_ROOT', 		$base);
-define('HTML_PATH_THEMES',		HTML_PATH_ROOT . 'bl-themes/');
+define('HTML_PATH_THEMES',		HTML_PATH_ROOT . 'cl-themes/');
 define('HTML_PATH_THEME',		HTML_PATH_THEMES . $site->theme() . '/');
 define('HTML_PATH_THEME_CSS',		HTML_PATH_THEME . 'css/');
 define('HTML_PATH_THEME_JS',		HTML_PATH_THEME . 'js/');
 define('HTML_PATH_THEME_IMG',		HTML_PATH_THEME . 'img/');
 define('HTML_PATH_ADMIN_ROOT',		HTML_PATH_ROOT . ADMIN_URI_FILTER . '/');
-define('HTML_PATH_ADMIN_THEME',		HTML_PATH_ROOT . 'bl-kernel/admin/themes/' . $site->adminTheme() . '/');
+define('HTML_PATH_ADMIN_THEME',		HTML_PATH_ROOT . 'cl-kernel/admin/themes/' . $site->adminTheme() . '/');
 define('HTML_PATH_ADMIN_THEME_JS',	HTML_PATH_ADMIN_THEME . 'js/');
 define('HTML_PATH_ADMIN_THEME_CSS',	HTML_PATH_ADMIN_THEME . 'css/');
-define('HTML_PATH_CORE_JS',		HTML_PATH_ROOT . 'bl-kernel/js/');
-define('HTML_PATH_CORE_CSS',		HTML_PATH_ROOT . 'bl-kernel/css/');
-define('HTML_PATH_CORE_IMG',		HTML_PATH_ROOT . 'bl-kernel/img/');
-define('HTML_PATH_CONTENT',		HTML_PATH_ROOT . 'bl-content/');
-define('HTML_PATH_UPLOADS',		HTML_PATH_ROOT . 'bl-content/uploads/');
+define('HTML_PATH_CORE_JS',		HTML_PATH_ROOT . 'cl-kernel/js/');
+define('HTML_PATH_CORE_CSS',		HTML_PATH_ROOT . 'cl-kernel/css/');
+define('HTML_PATH_CORE_IMG',		HTML_PATH_ROOT . 'cl-kernel/img/');
+define('HTML_PATH_CONTENT',		HTML_PATH_ROOT . 'cl-content/');
+define('HTML_PATH_UPLOADS',		HTML_PATH_ROOT . 'cl-content/uploads/');
 define('HTML_PATH_UPLOADS_PAGES',	HTML_PATH_UPLOADS . 'pages/');
 define('HTML_PATH_UPLOADS_PROFILES',	HTML_PATH_UPLOADS . 'profiles/');
 define('HTML_PATH_UPLOADS_THUMBNAILS',	HTML_PATH_UPLOADS . 'thumbnails/');
-define('HTML_PATH_PLUGINS',		HTML_PATH_ROOT . 'bl-plugins/');
+define('HTML_PATH_PLUGINS',		HTML_PATH_ROOT . 'cl-plugins/');
 
 // --- Objects with dependency ---
 $language = new Language($site->language());
@@ -217,7 +217,7 @@ define('MARKDOWN_PARSER', $site->markdownParser());
 
 // --- PHP paths with dependency ---
 // This paths are absolutes for the OS
-define('THEME_DIR',			PATH_ROOT . 'bl-themes' . DS . $site->theme() . DS);
+define('THEME_DIR',			PATH_ROOT . 'cl-themes' . DS . $site->theme() . DS);
 define('THEME_DIR_PHP',			THEME_DIR . 'php' . DS);
 define('THEME_DIR_CSS',			THEME_DIR . 'css' . DS);
 define('THEME_DIR_JS',			THEME_DIR . 'js' . DS);

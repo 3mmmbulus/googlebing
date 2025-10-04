@@ -99,7 +99,7 @@ EOF;
 		return true;
 	}
 
-	// Delete the page and uploads directories from bl-content
+	// Delete the page and uploads directories from cl-content
 	private function deleteContent()
 	{
 		// Clean the page database
