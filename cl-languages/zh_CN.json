@@ -390,5 +390,19 @@
     "custom-fields": "Custom fields",
     "define-custom-fields-for-the-content": "Define custom fields for the content. Learn more about custom fields in the <a href='https:\/\/docs.cloudsuo.com\/en\/content\/custom-fields'>documentation<\/a>.",
     "start-typing-to-see-a-list-of-suggestions": "输入内容以显示操作的建议。",
-    "view": "查看"
+    "view": "查看",
+    "insert-thumbnail": "插入缩略图",
+    "insert-linked-thumbnail": "插入链接缩略图",
+    "admin-panel-access": "管理面板访问",
+    "custom-admin-url": "自定义管理后台地址",
+    "admin-url-path": "管理后台地址路径",
+    "current-admin-url": "当前管理后台地址",
+    "new-admin-url": "新的管理后台地址将是",
+    "admin-uri-validation-error": "管理后台地址只能包含字母、数字和连字符",
+    "admin-uri-empty-error": "管理后台地址不能为空",
+    "admin-uri-length-error": "管理后台地址至少需要3个字符",
+    "reset-to-default": "重置为默认值",
+    "admin-url-security-notice": "⚠️ 安全提醒：修改管理后台地址后，请记住新地址。默认的 /admin/ 将不再可用。",
+    "admin-url-recommendation": "💡 建议：使用独特、难以猜测的管理后台地址来提高安全性。",
+    "admin-url-examples": "示例：myadmin、control-panel、secure-admin、dashboard2024"
 }

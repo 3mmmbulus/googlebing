@@ -640,6 +640,36 @@ function editSettings($args)
     $pages->setCustomFields($args['customFields']);
   }
 
+  // Validate and process admin URI filter
+  if (isset($args['adminUriFilter'])) {
+    $adminUriFilter = trim($args['adminUriFilter']);
+    
+    // Validation: only alphanumeric characters and hyphens allowed
+    if (!preg_match('/^[a-zA-Z0-9-]+$/', $adminUriFilter)) {
+      Alert::set($L->g('admin-uri-validation-error'), ALERT_STATUS_FAIL);
+      return false;
+    }
+    
+    // Validation: must not be empty
+    if (empty($adminUriFilter)) {
+      Alert::set($L->g('admin-uri-empty-error'), ALERT_STATUS_FAIL);
+      return false;
+    }
+    
+    // Validation: minimum length
+    if (strlen($adminUriFilter) < 3) {
+      Alert::set($L->g('admin-uri-length-error'), ALERT_STATUS_FAIL);
+      return false;
+    }
+    
+    // Reset to default if requested
+    if ($adminUriFilter === 'admin' && isset($args['resetAdminUri'])) {
+      $args['adminUriFilter'] = 'admin';
+    } else {
+      $args['adminUriFilter'] = $adminUriFilter;
+    }
+  }
+
   if ($site->set($args)) {
     // Check current order-by if changed it reorder the content
     if ($site->orderBy() != ORDER_BY) {

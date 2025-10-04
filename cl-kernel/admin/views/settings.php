@@ -15,6 +15,7 @@
 	<div class="nav nav-tabs" id="nav-tab" role="tablist">
 		<a class="nav-item nav-link active" id="nav-general-tab" data-toggle="tab" href="#general" role="tab" aria-controls="nav-general" aria-selected="false"><?php $L->p('General') ?></a>
 		<a class="nav-item nav-link" id="nav-advanced-tab" data-toggle="tab" href="#advanced" role="tab" aria-controls="nav-advanced" aria-selected="false"><?php $L->p('Advanced') ?></a>
+		<a class="nav-item nav-link" id="nav-security-tab" data-toggle="tab" href="#security" role="tab" aria-controls="nav-security" aria-selected="false"><?php $L->p('Security') ?></a>
 		<a class="nav-item nav-link" id="nav-seo-tab" data-toggle="tab" href="#seo" role="tab" aria-controls="nav-seo" aria-selected="false"><?php $L->p('SEO') ?></a>
 		<a class="nav-item nav-link" id="nav-social-tab" data-toggle="tab" href="#social" role="tab" aria-controls="nav-social" aria-selected="false"><?php $L->p('Social Networks') ?></a>
 		<a class="nav-item nav-link" id="nav-images-tab" data-toggle="tab" href="#images" role="tab" aria-controls="nav-images" aria-selected="false"><?php $L->p('Images') ?></a>
@@ -280,6 +281,83 @@ echo Bootstrap::formInputHidden(array(
 		'disabled' => Text::isEmpty($site->uriFilters('blog'))
 	));
 	?>
+</div>
+
+<!-- Security tab -->
+<div class="tab-pane fade" id="security" role="tabpanel" aria-labelledby="security-tab">
+	<?php
+	echo Bootstrap::formTitle(array('title' => $L->g('Admin Panel Access')));
+	?>
+	
+	<div class="alert alert-info" role="alert">
+		<i class="fa fa-info-circle"></i> <?php $L->p('admin-url-recommendation') ?>
+	</div>
+	
+	<div class="alert alert-warning" role="alert">
+		<i class="fa fa-exclamation-triangle"></i> <?php $L->p('admin-url-security-notice') ?>
+	</div>
+
+	<?php
+	echo Bootstrap::formInputText(array(
+		'name' => 'adminUriFilter',
+		'label' => $L->g('Custom Admin URL'),
+		'value' => $site->adminUriFilter(),
+		'class' => '',
+		'placeholder' => 'admin',
+		'tip' => $L->g('admin-url-examples') . '<br><strong>' . $L->g('current-admin-url') . ':</strong> ' . DOMAIN_BASE . $site->adminUriFilter() . '/',
+		'id' => 'adminUriInput'
+	));
+	?>
+
+	<div class="form-group row">
+		<label class="col-sm-2 col-form-label"></label>
+		<div class="col-sm-10">
+			<small class="form-text text-muted">
+				<strong><?php $L->p('new-admin-url') ?>:</strong> 
+				<span id="previewAdminUrl"><?php echo DOMAIN_BASE ?><span id="dynamicAdminUri"><?php echo $site->adminUriFilter() ?></span>/</span>
+			</small>
+		</div>
+	</div>
+
+	<div class="form-group row">
+		<label class="col-sm-2 col-form-label"></label>
+		<div class="col-sm-10">
+			<button type="button" class="btn btn-secondary btn-sm" id="resetAdminUri">
+				<i class="fa fa-undo"></i> <?php $L->p('reset-to-default') ?>
+			</button>
+		</div>
+	</div>
+
+	<script>
+		// Real-time preview of admin URL
+		$("#adminUriInput").on('input', function() {
+			var newUri = $(this).val() || 'admin';
+			$("#dynamicAdminUri").text(newUri);
+		});
+
+		// Reset to default
+		$("#resetAdminUri").on('click', function() {
+			$("#adminUriInput").val('admin');
+			$("#dynamicAdminUri").text('admin');
+		});
+
+		// Validation on input
+		$("#adminUriInput").on('input', function() {
+			var value = $(this).val();
+			var isValid = /^[a-zA-Z0-9-]+$/.test(value) && value.length >= 3;
+			
+			if (value && !isValid) {
+				$(this).addClass('is-invalid');
+				if (!$(this).next('.invalid-feedback').length) {
+					$(this).after('<div class="invalid-feedback"><?php $L->p("admin-uri-validation-error") ?></div>');
+				}
+			} else {
+				$(this).removeClass('is-invalid');
+				$(this).next('.invalid-feedback').remove();
+			}
+		});
+	</script>
+
 </div>
 
 <!-- SEO tab -->

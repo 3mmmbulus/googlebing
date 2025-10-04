@@ -393,5 +393,17 @@
     "start-typing-to-see-a-list-of-suggestions": "Start typing to see a list of suggestions.",
     "view": "View",
     "insert-thumbnail": "Insert thumbnail",
-    "insert-linked-thumbnail": "Insert linked thumbnail"
+    "insert-linked-thumbnail": "Insert linked thumbnail",
+    "admin-panel-access": "Admin Panel Access",
+    "custom-admin-url": "Custom Admin URL",
+    "admin-url-path": "Admin URL Path",
+    "current-admin-url": "Current admin URL",
+    "new-admin-url": "New admin URL will be",
+    "admin-uri-validation-error": "Admin URI can only contain letters, numbers, and hyphens",
+    "admin-uri-empty-error": "Admin URI cannot be empty",
+    "admin-uri-length-error": "Admin URI must be at least 3 characters long",
+    "reset-to-default": "Reset to default",
+    "admin-url-security-notice": "⚠️ Security Notice: After changing the admin URL, please bookmark the new address. The default /admin/ will no longer work.",
+    "admin-url-recommendation": "💡 Recommendation: Use a unique, hard-to-guess admin URL to improve security.",
+    "admin-url-examples": "Examples: myadmin, control-panel, secure-admin, dashboard2024"
 }
