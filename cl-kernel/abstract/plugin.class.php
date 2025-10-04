@@ -117,8 +117,44 @@ class Plugin
 	// Returns the value of the key from the metadata of the plugin, FALSE if the key doesn't exist
 	public function getMetadata($key)
 	{
+		// Try to get localized version first
+		$localizedData = $this->getLocalizedMetadata();
+		if ($localizedData && isset($localizedData[$key])) {
+			return $localizedData[$key];
+		}
+
+		// Fallback to default metadata
 		if (isset($this->metadata[$key])) {
 			return $this->metadata[$key];
+		}
+
+		return false;
+	}
+
+	// Get localized metadata based on current language
+	public function getLocalizedMetadata()
+	{
+		global $site;
+		
+		// Get current language, default to English if not Chinese
+		$currentLang = $site->language();
+		$langFile = '';
+		
+		if ($currentLang === 'zh_CN' || $currentLang === 'zh_TW') {
+			$langFile = 'zh_CN.json';
+		} else {
+			$langFile = 'en.json';
+		}
+
+		$languageFilePath = PATH_PLUGINS . $this->directoryName() . DS . 'languages' . DS . $langFile;
+		
+		if (file_exists($languageFilePath)) {
+			$languageString = file_get_contents($languageFilePath);
+			$languageData = json_decode($languageString, true);
+			
+			if (isset($languageData['plugin-data'])) {
+				return $languageData['plugin-data'];
+			}
 		}
 
 		return false;

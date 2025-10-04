@@ -1,0 +1,7 @@
+{
+	"plugin-data":
+	{
+		"name": "点击计数器",
+		"description": "记录和显示页面的点击次数。"
+	}
+}

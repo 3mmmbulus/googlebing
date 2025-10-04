@@ -1,0 +1,7 @@
+{
+	"plugin-data":
+	{
+		"name": "站点地图",
+		"description": "生成XML格式的站点地图。"
+	}
+}

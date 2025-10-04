@@ -1,0 +1,7 @@
+{
+	"plugin-data":
+	{
+		"name": "远程内容",
+		"description": "允许从远程源导入内容。"
+	}
+}

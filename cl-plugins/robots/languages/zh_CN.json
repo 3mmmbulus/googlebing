@@ -1,0 +1,7 @@
+{
+	"plugin-data":
+	{
+		"name": "机器人协议",
+		"description": "生成robots.txt文件，控制搜索引擎爬虫。"
+	}
+}

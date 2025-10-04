@@ -1,0 +1,7 @@
+{
+	"plugin-data":
+	{
+		"name": "API接口",
+		"description": "提供REST API接口访问。"
+	}
+}

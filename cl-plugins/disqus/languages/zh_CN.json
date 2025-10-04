@@ -1,0 +1,7 @@
+{
+	"plugin-data":
+	{
+		"name": "评论系统",
+		"description": "集成Disqus评论系统。"
+	}
+}
