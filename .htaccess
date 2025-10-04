@@ -1,5 +1,16 @@
 AddDefaultCharset UTF-8
 
+# CORS headers for fonts and static resources
+<IfModule mod_headers.c>
+    # Allow fonts from any subdomain
+    <FilesMatch "\.(ttf|ttc|otf|eot|woff|woff2|font.css|css|js)$">
+        Header set Access-Control-Allow-Origin "*"
+        Header set Access-Control-Allow-Methods "GET, POST, OPTIONS"
+        Header set Access-Control-Allow-Headers "Origin, Content-Type, Accept, Authorization"
+        Header set Access-Control-Allow-Credentials "false"
+    </FilesMatch>
+</IfModule>
+
 <IfModule mod_rewrite.c>
 
 # Enable rewrite rules

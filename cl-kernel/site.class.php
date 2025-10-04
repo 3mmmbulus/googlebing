@@ -341,11 +341,27 @@ class Site extends dbJSON
 			return $protocol . $domain;
 		}
 
-		// Parse the domain from the field url (Settings->Advanced)
-		$parse = parse_url($this->url());
-		$domain = rtrim($parse['host'], '/');
-		$port = !empty($parse['port']) ? ':' . $parse['port'] : '';
-		$scheme = !empty($parse['scheme']) ? $parse['scheme'] . '://' : 'http://';
+		// Check if current domain matches the configured domain
+		$currentDomain = trim($_SERVER['HTTP_HOST'], '/');
+		$configuredUrl = $this->url();
+		$parsedConfigured = parse_url($configuredUrl);
+		$configuredDomain = $parsedConfigured['host'];
+
+		// If current domain is different from configured, use current domain
+		// This handles cases like www.domain.com vs domain.com automatically
+		if ($currentDomain !== $configuredDomain) {
+			if (!empty($_SERVER['HTTPS'])) {
+				$protocol = 'https://';
+			} else {
+				$protocol = 'http://';
+			}
+			return $protocol . $currentDomain;
+		}
+
+		// Use the configured URL as-is
+		$domain = rtrim($parsedConfigured['host'], '/');
+		$port = !empty($parsedConfigured['port']) ? ':' . $parsedConfigured['port'] : '';
+		$scheme = !empty($parsedConfigured['scheme']) ? $parsedConfigured['scheme'] . '://' : 'http://';
 
 		return $scheme . $domain . $port;
 	}
