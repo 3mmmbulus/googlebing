@@ -30,3 +30,7 @@ bl-themes/tagg
 bl-themes/small
 bl-themes/future-imperfect
 bl-themes/social-network
+
+# custom excludes
+.well-known/
+.user.ini
