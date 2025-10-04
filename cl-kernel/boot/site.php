@@ -1,4 +1,4 @@
-<?php defined('BLUDIT') or die('Bludit CMS.');
+<?php defined('CLOUDSUO') or die('Cloudsuo CMS.');
 
 // Load plugins rules
 include(PATH_RULES.'60.plugins.php');

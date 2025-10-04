@@ -1,4 +1,4 @@
-<?php defined('BLUDIT') or die('Bludit CMS.'); ?>
+<?php defined('CLOUDSUO') or die('Cloudsuo CMS.'); ?>
 
 <?php echo Bootstrap::formOpen(array('id' => 'jsform', 'class' => 'tab-content')); ?>
 
@@ -117,7 +117,7 @@ echo Bootstrap::formInputHidden(array(
 		<script>
 			// $("#jsbuttonRemovePicture").on("click", function() {
 			// 	var username = $("#jsusername").val();
-			// 	bluditAjax.removeProfilePicture(username);
+			// 	cloudsuoAjax.removeProfilePicture(username);
 			// 	$("#jsprofilePicturePreview").attr("src", "<?php echo HTML_PATH_CORE_IMG . 'default.svg' ?>");
 			// });
 

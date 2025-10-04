@@ -1,9 +1,9 @@
-<?php defined('BLUDIT') or die('Bludit CMS.');
+<?php defined('CLOUDSUO') or die('Cloudsuo CMS.');
 
 class Session {
 
 	private static $started = false;
-	private static $sessionName = 'BLUDIT-KEY';
+	private static $sessionName = 'CLOUDSUO-KEY';
 
 	public static function start($path, $secure)
 	{

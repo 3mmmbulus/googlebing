@@ -1,4 +1,4 @@
-<?php defined('BLUDIT') or die('Bludit CMS.'); ?>
+<?php defined('CLOUDSUO') or die('Cloudsuo CMS.'); ?>
 
 <?php
 
@@ -327,7 +327,7 @@ echo Bootstrap::formInputHidden(array(
 				'name' => 'slug',
 				'tip' => $L->g('URL associated with the content'),
 				'label' => $L->g('Friendly URL'),
-				'placeholder' => $L->g('Leave empty for autocomplete by Bludit.'),
+				'placeholder' => $L->g('Leave empty for autocomplete by Cloudsuo.'),
 				'value' => $page->slug()
 			));
 
@@ -502,9 +502,9 @@ foreach ($customFields as $field => $options) {
 			var uuid = $("#jsuuid").val();
 			var title = $("#jstitle").val();
 			var content = editorGetContent();
-			var ajax = new bluditAjax();
-			bluditAjax.saveAsDraft(uuid, title, content).then(function(data) {
-				var preview = window.open("<?php echo DOMAIN_PAGES . 'autosave-' . $page->uuid() . '?preview=' . md5('autosave-' . $page->uuid()) ?>", "bludit-preview");
+			var ajax = new cloudsuoAjax();
+			cloudsuoAjax.saveAsDraft(uuid, title, content).then(function(data) {
+				var preview = window.open("<?php echo DOMAIN_PAGES . 'autosave-' . $page->uuid() . '?preview=' . md5('autosave-' . $page->uuid()) ?>", "cloudsuo-preview");
 				preview.focus();
 			});
 		});
@@ -551,7 +551,7 @@ foreach ($customFields as $field => $options) {
 			// Autosave only when the user change the content
 			if (currentContent != content) {
 				currentContent = content;
-				bluditAjax.saveAsDraft(uuid, title, content).then(function(data) {
+				cloudsuoAjax.saveAsDraft(uuid, title, content).then(function(data) {
 					if (data.status == 0) {
 						showAlert("<?php $L->p('Autosave') ?>");
 					}

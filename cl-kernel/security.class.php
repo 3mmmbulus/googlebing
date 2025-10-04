@@ -1,4 +1,4 @@
-<?php defined('BLUDIT') or die('Bludit Badass CMS.');
+<?php defined('CLOUDSUO') or die('Cloudsuo Badass CMS.');
 
 class Security extends dbJSON
 {

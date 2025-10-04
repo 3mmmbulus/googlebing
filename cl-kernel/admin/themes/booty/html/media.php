@@ -28,7 +28,7 @@ $numberOfPages = count($listOfFilesByPage);
 		<div id="jsalertMedia" class="alert alert-warning d-none" role="alert"></div>
 
 		<!-- Form and Input file -->
-		<form name="bluditFormUpload" id="jsbluditFormUpload" enctype="multipart/form-data">
+		<form name="cloudsuoFormUpload" id="jscloudsuoFormUpload" enctype="multipart/form-data">
 			<div class="custom-file">
 				<input type="file" class="custom-file-input" id="jsimages" name="images[]" multiple>
 				<label class="custom-file-label" for="jsimages"><?php $L->p('Choose images to upload'); ?></label>
@@ -37,21 +37,21 @@ $numberOfPages = count($listOfFilesByPage);
 
 		<!-- Progress bar -->
 		<div class="progress mt-3">
-			<div id="jsbluditProgressBar" class="progress-bar bg-primary" role="progressbar" style="width:0%"></div>
+			<div id="jscloudsuoProgressBar" class="progress-bar bg-primary" role="progressbar" style="width:0%"></div>
 		</div>
 
 	<!--
 		IMAGES LIST
 	-->
 		<!-- Table for list files -->
-		<table id="jsbluditMediaTable" class="table mt-3">
+		<table id="jscloudsuoMediaTable" class="table mt-3">
 			<tr>
 				<td><?php $L->p('There are no images'); ?></td>
 			</tr>
 		</table>
 
 		<!-- Paginator -->
-		<nav id="jsbluditMediaTablePagination"></nav>
+		<nav id="jscloudsuoMediaTablePagination"></nav>
 
 	</div>
 </div>
@@ -76,7 +76,7 @@ function closeMediaManager() {
 
 // Remove all files from the table
 function cleanTable() {
-	$('#jsbluditMediaTable').empty();
+	$('#jscloudsuoMediaTable').empty();
 }
 
 function showMediaAlert(message) {
@@ -115,7 +115,7 @@ function displayFiles(files, numberOfPages = <?= $numberOfPages ?>) {
 						'<\/div>'+
 					'<\/td>'+
 				'<\/tr>';
-			$('#jsbluditMediaTable').append(tableRow);
+			$('#jscloudsuoMediaTable').append(tableRow);
 		});
 
 		mediaPagination = '<ul class="pagination justify-content-center flex-wrap">';
@@ -123,13 +123,13 @@ function displayFiles(files, numberOfPages = <?= $numberOfPages ?>) {
 			mediaPagination += '<li class="page-item"><button type="button" class="btn btn-link page-link" onClick="getFiles('+i+')">'+i+'</button></li>';
 		}
 		mediaPagination += '</ul>';
-		$('#jsbluditMediaTablePagination').html(mediaPagination);
+		$('#jscloudsuoMediaTablePagination').html(mediaPagination);
 
 	}
 
 	if (files.length == 0) {
-		$('#jsbluditMediaTable').html("<p><?php (IMAGE_RESTRICT ? $L->p('There are no images for the page') : $L->p('There are no images')) ?></p>");
-		$('#jsbluditMediaTablePagination').html('');
+		$('#jscloudsuoMediaTable').html("<p><?php (IMAGE_RESTRICT ? $L->p('There are no images for the page') : $L->p('There are no images')) ?></p>");
+		$('#jscloudsuoMediaTablePagination').html('');
 	}
 }
 
@@ -195,11 +195,11 @@ function uploadImages() {
 	};
 
 	// Clean progress bar
-	$("#jsbluditProgressBar").removeClass().addClass("progress-bar bg-primary");
-	$("#jsbluditProgressBar").width("0");
+	$("#jscloudsuoProgressBar").removeClass().addClass("progress-bar bg-primary");
+	$("#jscloudsuoProgressBar").width("0");
 
 	// Data to send via AJAX
-	var formData = new FormData($("#jsbluditFormUpload")[0]);
+	var formData = new FormData($("#jscloudsuoFormUpload")[0]);
 	formData.append("uuid", "<?php echo PAGE_IMAGES_KEY ?>");
 	formData.append("tokenCSRF", tokenCSRF);
 
@@ -216,7 +216,7 @@ function uploadImages() {
 				xhr.upload.addEventListener("progress", function(e) {
 					if (e.lengthComputable) {
 						var percentComplete = (e.loaded / e.total)*100;
-						$("#jsbluditProgressBar").width(percentComplete+"%");
+						$("#jscloudsuoProgressBar").width(percentComplete+"%");
 					}
 				}, false);
 			}
@@ -224,11 +224,11 @@ function uploadImages() {
 		}
 	}).done(function(data) {
 		if (data.status==0) {
-			$("#jsbluditProgressBar").removeClass("bg-primary").addClass("bg-success");
+			$("#jscloudsuoProgressBar").removeClass("bg-primary").addClass("bg-success");
 			// Get the files for the first page, this include the files uploaded
 			getFiles(1);
 		} else {
-			$("#jsbluditProgressBar").removeClass("bg-primary").addClass("bg-danger");
+			$("#jscloudsuoProgressBar").removeClass("bg-primary").addClass("bg-danger");
 			showMediaAlert(data.message);
 		}
 	});

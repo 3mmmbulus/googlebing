@@ -1,4 +1,4 @@
-<?php defined('BLUDIT') or die('Bludit CMS.');
+<?php defined('CLOUDSUO') or die('Cloudsuo CMS.');
 
 class Login
 {
@@ -167,7 +167,7 @@ class Login
 	{
 		$agent = getenv('HTTP_USER_AGENT');
 		if (empty($agent)) {
-			$agent = 'Bludit/2.0 (Mr Nibbler Protocol)';
+			$agent = 'Cloudsuo/2.0 (Mr Nibbler Protocol)';
 		}
 		return sha1($agent);
 	}

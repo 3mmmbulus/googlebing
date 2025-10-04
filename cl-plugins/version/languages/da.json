@@ -1,6 +1,6 @@
 {
 	"plugin-data": {
-		"description": "Vis den aktuelle version på sidepanelet på kontrolpanelet, og kontroller regelmæssigt for nye Bludit udgivelser.",
+		"description": "Vis den aktuelle version på sidepanelet på kontrolpanelet, og kontroller regelmæssigt for nye Cloudsuo udgivelser.",
 		"name": "Version"
 	},
 	"show-alert-when-there-is-a-new-version-in-the-sidebar": "Vis notifikation, når der er en ny version i sidepanelet",

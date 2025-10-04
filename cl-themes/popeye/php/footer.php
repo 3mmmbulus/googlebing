@@ -6,6 +6,6 @@
 			}
 			?>
 		</ul>
-		<p class="m-0 mt-2">Powered by <a class="color-blue" href="https://www.bludit.com">Bludit</a> - Open source CMS</p>
+		<p class="m-0 mt-2">Powered by <a class="color-blue" href="https://www.cloudsuo.com">Cloudsuo</a> - Open source CMS</p>
 	</div>
 </footer>

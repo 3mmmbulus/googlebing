@@ -511,7 +511,7 @@ class pluginAPI extends Plugin
 			);
 		}
 
-		// Move from PHP tmp file to Bludit tmp directory
+		// Move from PHP tmp file to Cloudsuo tmp directory
 		Filesystem::mv($_FILES['image']['tmp_name'], PATH_TMP . $_FILES['image']['name']);
 
 		// Transform image and create thumbnails

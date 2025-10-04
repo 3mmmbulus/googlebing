@@ -1,4 +1,4 @@
-<?php defined('BLUDIT') or die('Bludit CMS.');
+<?php defined('CLOUDSUO') or die('Cloudsuo CMS.');
 
 /*
 	Environment variables
@@ -38,8 +38,8 @@ define('SALT_LENGTH', 8);
 define('PAGE_BREAK', '<!-- pagebreak -->');
 
 // Remember me
-define('REMEMBER_COOKIE_USERNAME', 'BLUDITREMEMBERUSERNAME');
-define('REMEMBER_COOKIE_TOKEN', 'BLUDITREMEMBERTOKEN');
+define('REMEMBER_COOKIE_USERNAME', 'CLOUDSUOREMEMBERUSERNAME');
+define('REMEMBER_COOKIE_TOKEN', 'CLOUDSUOREMEMBERTOKEN');
 define('REMEMBER_COOKIE_EXPIRE_IN_DAYS', 30);
 
 // Filename

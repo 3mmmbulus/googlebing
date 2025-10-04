@@ -2,7 +2,7 @@
 	"amount-of-pages": "Antal af sider",
 	"api-token": "API-token",
 	"plugin-data": {
-		"description": "Grænseflade til interaktion med Bludit ved hjælp af HTTP-protokol. <br> Læs mere om denne udvidelse i <a href=\"https://docs.bludit.com/en/api/introduction\">API-introduktion</a>.",
+		"description": "Grænseflade til interaktion med Cloudsuo ved hjælp af HTTP-protokol. <br> Læs mere om denne udvidelse i <a href=\"https://docs.cloudsuo.com/en/api/introduction\">API-introduktion</a>.",
 		"name": "API"
 	},
 	"this-is-the-maximum-of-pages-to-return-when-you-call-to": "Dette er det maksimale antal sider, der skal returneres, når du lavet et kald til / api / sider",

@@ -2,7 +2,7 @@
 	"plugin-data":
 	{
 		"name": "Externe Inhoud",
-		"description": "Met deze plugin is het eenvoudig om inhoud voor de website op GitHub of soortgelijke bronnen te beheren en vervolgens te synchroniseren met Bludit."
+		"description": "Met deze plugin is het eenvoudig om inhoud voor de website op GitHub of soortgelijke bronnen te beheren en vervolgens te synchroniseren met Cloudsuo."
 	},
 	"webhook": "Web-hook",
 	"source": "Bron",

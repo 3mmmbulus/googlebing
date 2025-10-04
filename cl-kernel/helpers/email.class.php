@@ -1,4 +1,4 @@
-<?php defined('BLUDIT') or die('Bludit CMS.');
+<?php defined('CLOUDSUO') or die('Cloudsuo CMS.');
 
 class Email {
 
@@ -27,7 +27,7 @@ class Email {
 		$message = '<html>
 		<head>
 			<meta charset="UTF-8">
-			<title>BLUDIT</title>
+			<title>CLOUDSUO</title>
 		</head>
 		<body>
 		<div>

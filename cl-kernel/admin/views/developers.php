@@ -26,12 +26,12 @@ exec('locale -a', $locales);
 printTable('Locales installed', $locales);
 
 echo '<hr>';
-echo '<h2>BLUDIT</h2>';
+echo '<h2>CLOUDSUO</h2>';
 echo '<hr>';
 
-// Constanst defined by Bludit
+// Constanst defined by Cloudsuo
 $constants = get_defined_constants(true);
-printTable('Bludit Constants', $constants['user']);
+printTable('Cloudsuo Constants', $constants['user']);
 
 // Site object
 printTable('$site object database',$site->db);

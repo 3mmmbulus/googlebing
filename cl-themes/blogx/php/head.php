@@ -1,6 +1,6 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Bludit">
+<meta name="generator" content="Cloudsuo">
 
 <!-- Dynamic title tag -->
 <?php echo Theme::metaTags('title'); ?>
@@ -14,11 +14,11 @@
 <!-- Include Bootstrap CSS file bootstrap.css -->
 <?php echo Theme::cssBootstrap(); ?>
 
-<!-- Include CSS Bootstrap ICONS file from Bludit Core -->
+<!-- Include CSS Bootstrap ICONS file from Cloudsuo Core -->
 <?php echo Theme::cssBootstrapIcons(); ?>
 
 <!-- Include CSS Styles from this theme -->
 <?php echo Theme::css('css/style.css'); ?>
 
-<!-- Load Bludit Plugins: Site head -->
+<!-- Load Cloudsuo Plugins: Site head -->
 <?php Theme::plugins('siteHead'); ?>

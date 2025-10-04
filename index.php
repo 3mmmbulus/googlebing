@@ -1,26 +1,26 @@
 <?php
 
 /*
- * Bludit
- * https://www.bludit.com
+ * Cloudsuo
+ * https://www.cloudsuo.com
  * Author Diego Najar
- * Bludit is opensource software licensed under the MIT license.
+ * Cloudsuo is opensource software licensed under the MIT license.
 */
 
-// Check if Bludit is installed
+// Check if Cloudsuo is installed
 if (!file_exists('cl-content/databases/site.php')) {
 	$base = dirname($_SERVER['SCRIPT_NAME']);
 	$base = rtrim($base, '/');
 	$base = rtrim($base, '\\'); // Workaround for Windows Servers
 	header('Location:'.$base.'/install.php');
-	exit('<a href="./install.php">Install Bludit first.</a>');
+	exit('<a href="./install.php">Install Cloudsuo first.</a>');
 }
 
 // Load time init
 $loadTime = microtime(true);
 
 // Security constant
-define('BLUDIT', true);
+define('CLOUDSUO', true);
 
 // Directory separator
 define('DS', DIRECTORY_SEPARATOR);

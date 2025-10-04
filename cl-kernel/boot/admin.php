@@ -1,10 +1,10 @@
-<?php defined('BLUDIT') or die('Bludit CMS.');
+<?php defined('CLOUDSUO') or die('Cloudsuo CMS.');
 
 // Start the session
 // If the session is not possible to start the admin area is not available
 Session::start($site->urlPath(), $site->isHTTPS());
 if (Session::started()===false) {
-	exit('Bludit CMS. Session initialization failed.');
+	exit('Cloudsuo CMS. Session initialization failed.');
 }
 
 $login = new Login();
@@ -16,7 +16,7 @@ $layout = array(
 	'slug'=>null,
 	'plugin'=>false,
 	'parameters'=>null,
-	'title'=>'Bludit'
+	'title'=>'Cloudsuo'
 );
 
 // Get the Controller

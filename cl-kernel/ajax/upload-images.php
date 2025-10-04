@@ -1,4 +1,4 @@
-<?php defined('BLUDIT') or die('Bludit CMS.');
+<?php defined('CLOUDSUO') or die('Cloudsuo CMS.');
 header('Content-Type: application/json');
 
 /*
@@ -73,7 +73,7 @@ foreach ($_FILES['images']['name'] as $uuid => $filename) {
 		}
 	}
 
-	// Move from PHP tmp file to Bludit tmp directory
+	// Move from PHP tmp file to Cloudsuo tmp directory
 	Filesystem::mv($_FILES['images']['tmp_name'][$uuid], PATH_TMP . $filename);
 
 	// Transform the image and generate the thumbnail

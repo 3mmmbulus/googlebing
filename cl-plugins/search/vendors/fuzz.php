@@ -1,7 +1,7 @@
 <?php
 
 /**
- * This script was modified to fit in Bludit
+ * This script was modified to fit in Cloudsuo
 */
 
 /**

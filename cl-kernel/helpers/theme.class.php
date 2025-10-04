@@ -77,7 +77,7 @@ class Theme
 
 	// Returns the absolute URL of the site
 	// Ex. https://example.com the method returns https://example.com/
-	// Ex. https://example.com/bludit/ the method returns https://example.com/bludit/
+	// Ex. https://example.com/cloudsuo/ the method returns https://example.com/cloudsuo/
 	public static function siteUrl()
 	{
 		return DOMAIN_BASE;
@@ -85,7 +85,7 @@ class Theme
 
 	// Returns the absolute URL of admin panel
 	// Ex. https://example.com/admin/ the method returns https://example.com/admin/
-	// Ex. https://example.com/bludit/admin/ the method returns https://example.com/bludit/admin/
+	// Ex. https://example.com/cloudsuo/admin/ the method returns https://example.com/cloudsuo/admin/
 	public static function adminUrl()
 	{
 		return DOMAIN_ADMIN;
@@ -203,7 +203,7 @@ class Theme
 
 		$links = '';
 		foreach ($files as $file) {
-			$links .= '<link rel="stylesheet" type="text/css" href="' . $base . $file . '?version=' . BLUDIT_VERSION . '">' . PHP_EOL;
+			$links .= '<link rel="stylesheet" type="text/css" href="' . $base . $file . '?version=' . CLOUDSUO_VERSION . '">' . PHP_EOL;
 		}
 
 		return $links;
@@ -217,7 +217,7 @@ class Theme
 
 		$scripts = '';
 		foreach ($files as $file) {
-			$scripts .= '<script ' . $attributes . ' src="' . $base . $file . '?version=' . BLUDIT_VERSION . '"></script>' . PHP_EOL;
+			$scripts .= '<script ' . $attributes . ' src="' . $base . $file . '?version=' . CLOUDSUO_VERSION . '"></script>' . PHP_EOL;
 		}
 
 		return $scripts;
@@ -251,33 +251,33 @@ class Theme
 
 	public static function jquery()
 	{
-		return '<script src="' . DOMAIN_CORE_JS . 'jquery.min.js?version=' . BLUDIT_VERSION . '"></script>' . PHP_EOL;
+		return '<script src="' . DOMAIN_CORE_JS . 'jquery.min.js?version=' . CLOUDSUO_VERSION . '"></script>' . PHP_EOL;
 	}
 
 	public static function jsBootstrap($attributes = '')
 	{
-		return '<script ' . $attributes . ' src="' . DOMAIN_CORE_JS . 'bootstrap.bundle.min.js?version=' . BLUDIT_VERSION . '"></script>' . PHP_EOL;
+		return '<script ' . $attributes . ' src="' . DOMAIN_CORE_JS . 'bootstrap.bundle.min.js?version=' . CLOUDSUO_VERSION . '"></script>' . PHP_EOL;
 	}
 
 	public static function cssBootstrap()
 	{
-		return '<link rel="stylesheet" type="text/css" href="' . DOMAIN_CORE_CSS . 'bootstrap.min.css?version=' . BLUDIT_VERSION . '">' . PHP_EOL;
+		return '<link rel="stylesheet" type="text/css" href="' . DOMAIN_CORE_CSS . 'bootstrap.min.css?version=' . CLOUDSUO_VERSION . '">' . PHP_EOL;
 	}
 
 	public static function cssBootstrapIcons()
 	{
 		// https://icons.getbootstrap.com/
-		return '<link rel="stylesheet" type="text/css" href="' . DOMAIN_CORE_CSS . 'bootstrap-icons/bootstrap-icons.css?version=' . BLUDIT_VERSION . '">' . PHP_EOL;
+		return '<link rel="stylesheet" type="text/css" href="' . DOMAIN_CORE_CSS . 'bootstrap-icons/bootstrap-icons.css?version=' . CLOUDSUO_VERSION . '">' . PHP_EOL;
 	}
 
 	public static function cssLineAwesome()
 	{
-		return '<link rel="stylesheet" type="text/css" href="' . DOMAIN_CORE_CSS . 'line-awesome/css/line-awesome-font-awesome.min.css?version=' . BLUDIT_VERSION . '">' . PHP_EOL;
+		return '<link rel="stylesheet" type="text/css" href="' . DOMAIN_CORE_CSS . 'line-awesome/css/line-awesome-font-awesome.min.css?version=' . CLOUDSUO_VERSION . '">' . PHP_EOL;
 	}
 
 	public static function jsSortable($attributes = '')
 	{
 		// https://github.com/psfpro/bootstrap-html5sortable
-		return '<script ' . $attributes . ' src="' . DOMAIN_CORE_JS . 'jquery.sortable.min.js?version=' . BLUDIT_VERSION . '"></script>' . PHP_EOL;
+		return '<script ' . $attributes . ' src="' . DOMAIN_CORE_JS . 'jquery.sortable.min.js?version=' . CLOUDSUO_VERSION . '"></script>' . PHP_EOL;
 	}
 }

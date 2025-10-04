@@ -2,7 +2,7 @@
 	"plugin-data":
 	{
 		"name": "API",
-		"description": "HTTP protokolünü kullanarak Bludit ile etkileşimde bulunmak için arabirim. <br> Bu eklenti hakkında daha fazla bilgi için <a href=\"https://docs.bludit.com/en/api/introduction\">API Tanıtımı (ingilizce)</a>."
+		"description": "HTTP protokolünü kullanarak Cloudsuo ile etkileşimde bulunmak için arabirim. <br> Bu eklenti hakkında daha fazla bilgi için <a href=\"https://docs.cloudsuo.com/en/api/introduction\">API Tanıtımı (ingilizce)</a>."
 	},
 	"api-token": "API Token",
 	"amount-of-pages": "Sayfa miktarı",

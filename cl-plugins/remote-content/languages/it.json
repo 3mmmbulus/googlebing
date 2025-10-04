@@ -2,7 +2,7 @@
 	"plugin-data":
 	{
 		"name": "Contenuto remoto",
-		"description": "Questo plugin offre un modo semplice di avere il contenuto del proprio sito su Github e simili e di tenerli sincronizzati con Bludit."
+		"description": "Questo plugin offre un modo semplice di avere il contenuto del proprio sito su Github e simili e di tenerli sincronizzati con Cloudsuo."
 	},
 	"webhook": "Webhook",
 	"source": "Sorgente",

@@ -8,27 +8,27 @@ echo '
 ';
 
 echo '<tr>';
-echo '<td>Bludit Edition</td>';
-if (defined('BLUDIT_PRO')) {
-	echo '<td>PRO - '.$L->g('Thanks for supporting Bludit').' <span class="fa fa-heart" style="color: #ffc107"></span></td>';
+echo '<td>Cloudsuo Edition</td>';
+if (defined('CLOUDSUO_PRO')) {
+	echo '<td>PRO - '.$L->g('Thanks for supporting Cloudsuo').' <span class="fa fa-heart" style="color: #ffc107"></span></td>';
 } else {
-	echo '<td>Standard - <a target="_blank" href="https://pro.bludit.com">'.$L->g('Upgrade to Bludit PRO').'</a></td>';
+	echo '<td>Standard - <a target="_blank" href="https://pro.cloudsuo.com">'.$L->g('Upgrade to Cloudsuo PRO').'</a></td>';
 }
 echo '</tr>';
 
 echo '<tr>';
-echo '<td>Bludit Version</td>';
-echo '<td>'.BLUDIT_VERSION.'</td>';
+echo '<td>Cloudsuo Version</td>';
+echo '<td>'.CLOUDSUO_VERSION.'</td>';
 echo '</tr>';
 
 echo '<tr>';
-echo '<td>Bludit Codename</td>';
-echo '<td>'.BLUDIT_CODENAME.'</td>';
+echo '<td>Cloudsuo Codename</td>';
+echo '<td>'.CLOUDSUO_CODENAME.'</td>';
 echo '</tr>';
 
 echo '<tr>';
-echo '<td>Bludit Build Number</td>';
-echo '<td>'.BLUDIT_BUILD.'</td>';
+echo '<td>Cloudsuo Build Number</td>';
+echo '<td>'.CLOUDSUO_BUILD.'</td>';
 echo '</tr>';
 
 echo '<tr>';
@@ -37,7 +37,7 @@ echo '<td>'.Filesystem::bytesToHumanFileSize(Filesystem::getSize(PATH_ROOT)).'</
 echo '</tr>';
 
 echo '<tr>';
-echo '<td><a href="'.HTML_PATH_ADMIN_ROOT.'developers'.'">Bludit Developers</a></td>';
+echo '<td><a href="'.HTML_PATH_ADMIN_ROOT.'developers'.'">Cloudsuo Developers</a></td>';
 echo '<td></td>';
 echo '</tr>';
 

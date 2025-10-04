@@ -51,7 +51,7 @@ class plugineasyMDE extends Plugin
 
 		// Include plugin's CSS files
 		$html  = $this->includeCSS('easymde.min.css');
-		$html .= $this->includeCSS('bludit.css');
+		$html .= $this->includeCSS('cloudsuo.css');
 		return $html;
 	}
 
@@ -71,7 +71,7 @@ class plugineasyMDE extends Plugin
 		$pageBreak = PAGE_BREAK;
 
 		// Javascript path and file
-		$jsEasyMDE = $this->domainPath() . 'js/easymde.min.js?version=' . BLUDIT_VERSION;
+		$jsEasyMDE = $this->domainPath() . 'js/easymde.min.js?version=' . CLOUDSUO_VERSION;
 
 		return <<<EOF
 <script charset="utf-8" src="$jsEasyMDE"></script>
@@ -79,7 +79,7 @@ class plugineasyMDE extends Plugin
 	var easymde = null;
 
 	// Insert an image in the editor at the cursor position
-	// Function required for Bludit
+	// Function required for Cloudsuo
 	function editorInsertMedia(filename) {
 		var text = easymde.value();
 		easymde.value(text + "![$langImage]("+filename+")" + "\\n");
@@ -87,7 +87,7 @@ class plugineasyMDE extends Plugin
 	}
 
 	// Returns the content of the editor
-	// Function required for Bludit
+	// Function required for Cloudsuo
 	function editorGetContent() {
 		return easymde.value();
 	}

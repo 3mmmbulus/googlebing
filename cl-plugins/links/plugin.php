@@ -7,8 +7,8 @@ class pluginLinks extends Plugin
 	{
 		// JSON database
 		$jsondb = json_encode(array(
-			'Bludit' => 'https://www.bludit.com',
-			'Bludit PRO' => 'https://pro.bludit.com'
+			'Cloudsuo' => 'https://www.cloudsuo.com',
+			'Cloudsuo PRO' => 'https://pro.cloudsuo.com'
 		));
 
 		// Fields and default values for the database of this plugin
@@ -86,12 +86,12 @@ class pluginLinks extends Plugin
 
 		$html .= '<div>';
 		$html .= '<label>' . $L->get('Name') . '</label>';
-		$html .= '<input name="linkName" type="text" dir="auto" class="form-control" value="" placeholder="Bludit">';
+		$html .= '<input name="linkName" type="text" dir="auto" class="form-control" value="" placeholder="Cloudsuo">';
 		$html .= '</div>';
 
 		$html .= '<div>';
 		$html .= '<label>' . $L->get('Url') . '</label>';
-		$html .= '<input name="linkURL" type="text" dir="auto" class="form-control" value="" placeholder="https://www.bludit.com/">';
+		$html .= '<input name="linkURL" type="text" dir="auto" class="form-control" value="" placeholder="https://www.cloudsuo.com/">';
 		$html .= '</div>';
 
 		$html .= '<div>';

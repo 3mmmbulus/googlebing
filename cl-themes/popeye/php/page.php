@@ -2,7 +2,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-6 mx-auto">
-				<!-- Load Bludit Plugins: Page Begin -->
+				<!-- Load Cloudsuo Plugins: Page Begin -->
 				<?php Theme::plugins('pageBegin'); ?>
 
 				<?php if (!$page->isStatic() && !$url->notFound()) : ?>
@@ -31,7 +31,7 @@
 					<?php echo $page->content(); ?>
 				</div>
 
-				<!-- Load Bludit Plugins: Page End -->
+				<!-- Load Cloudsuo Plugins: Page End -->
 				<?php Theme::plugins('pageEnd'); ?>
 			</div>
 		</div>

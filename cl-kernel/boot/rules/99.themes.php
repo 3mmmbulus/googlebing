@@ -1,4 +1,4 @@
-<?php defined('BLUDIT') or die('Bludit CMS.');
+<?php defined('CLOUDSUO') or die('Cloudsuo CMS.');
 
 // ============================================================================
 // Variables
@@ -44,11 +44,11 @@ function buildThemes()
 
 				$database['compatible'] = false;
 				if (!empty($metadata['compatible'])) {
-					$bluditRoot = explode('.', BLUDIT_VERSION);
+					$cloudsuoRoot = explode('.', CLOUDSUO_VERSION);
 					$compatible = explode(',', $metadata['compatible']);
 					foreach ($compatible as $version) {
 						$root = explode('.', $version);
-						if ($root[0] == $bluditRoot[0] && $root[1] == $bluditRoot[1]) {
+						if ($root[0] == $cloudsuoRoot[0] && $root[1] == $cloudsuoRoot[1]) {
 							$database['compatible'] = true;
 						}
 					}

@@ -1,4 +1,4 @@
-<?php defined('BLUDIT') or die('Bludit CMS.'); ?>
+<?php defined('CLOUDSUO') or die('Cloudsuo CMS.'); ?>
 
 <?php echo Bootstrap::formOpen(array('id' => 'jsform', 'class' => 'tab-content')); ?>
 
@@ -571,7 +571,7 @@ echo Bootstrap::formInputHidden(array(
 	</div>
 	<script>
 		$("#jsbuttonRemoveLogo").on("click", function() {
-			bluditAjax.removeLogo();
+			cloudsuoAjax.removeLogo();
 			$("#jssiteLogoPreview").attr("src", "<?php echo HTML_PATH_CORE_IMG . 'default.svg' ?>");
 		});
 

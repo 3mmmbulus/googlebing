@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="generator" content="Bludit">
+	<meta name="generator" content="Cloudsuo">
 
 	<!-- Dynamic title tag -->
 	<?php echo Theme::metaTagTitle(); ?>
@@ -15,10 +15,10 @@
 	<!-- Include Favicon -->
 	<?php echo Theme::favicon('img/favicon.png'); ?>
 
-	<!-- Include CSS Bootstrap file from Bludit Core -->
+	<!-- Include CSS Bootstrap file from Cloudsuo Core -->
 	<?php echo Theme::cssBootstrap(); ?>
 
-	<!-- Include CSS Bootstrap ICONS file from Bludit Core -->
+	<!-- Include CSS Bootstrap ICONS file from Cloudsuo Core -->
 	<?php echo Theme::cssBootstrapIcons(); ?>
 
 	<!-- Include CSS Styles from this theme -->
@@ -33,13 +33,13 @@
 		</style>
 	<?php endif; ?>
 
-	<!-- Load Bludit Plugins: Site head -->
+	<!-- Load Cloudsuo Plugins: Site head -->
 	<?php Theme::plugins('siteHead'); ?>
 </head>
 
 <body>
 
-	<!-- Load Bludit Plugins: Site Body Begin -->
+	<!-- Load Cloudsuo Plugins: Site Body Begin -->
 	<?php Theme::plugins('siteBodyBegin'); ?>
 
 	<!-- Navbar -->
@@ -60,13 +60,13 @@
 	<!-- Footer -->
 	<?php include(THEME_DIR_PHP . 'footer.php'); ?>
 
-	<!-- Include Jquery file from Bludit Core -->
+	<!-- Include Jquery file from Cloudsuo Core -->
 	<?php echo Theme::jquery(); ?>
 
-	<!-- Include javascript Bootstrap file from Bludit Core -->
+	<!-- Include javascript Bootstrap file from Cloudsuo Core -->
 	<?php echo Theme::jsBootstrap(); ?>
 
-	<!-- Load Bludit Plugins: Site Body End -->
+	<!-- Load Cloudsuo Plugins: Site Body End -->
 	<?php Theme::plugins('siteBodyEnd'); ?>
 
 </body>

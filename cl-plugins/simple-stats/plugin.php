@@ -44,7 +44,7 @@ class pluginSimpleStats extends Plugin
 		$html .= '</select>';
 		$html .= '</div>';
 
-		if (defined('BLUDIT_PRO')) {
+		if (defined('CLOUDSUO_PRO')) {
 			$html .= '<div>';
 			$html .= '<label>' . $L->get('Exclude administrators users') . '</label>';
 			$html .= '<select name="excludeAdmins">';
@@ -205,7 +205,7 @@ EOF;
 	// The line is a json array with the hash IP of the visitor and the time
 	public function addVisitor()
 	{
-		if (Cookie::get('BLUDIT-KEY') && defined('BLUDIT_PRO') && $this->getValue('excludeAdmins')) {
+		if (Cookie::get('CLOUDSUO-KEY') && defined('CLOUDSUO_PRO') && $this->getValue('excludeAdmins')) {
 			return false;
 		}
 		$currentTime = Date::current('Y-m-d H:i:s');

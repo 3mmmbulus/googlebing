@@ -1,10 +1,10 @@
-<?php defined('BLUDIT') or die('Bludit CMS.');
+<?php defined('CLOUDSUO') or die('Cloudsuo CMS.');
 
-// Bludit version
-define('BLUDIT_VERSION',        '3.16.2');
-define('BLUDIT_CODENAME',       'Valencia');
-define('BLUDIT_RELEASE_DATE',   '2024-08-23');
-define('BLUDIT_BUILD',          '20240806');
+// Cloudsuo version
+define('CLOUDSUO_VERSION',        '3.16.2');
+define('CLOUDSUO_CODENAME',       'Valencia');
+define('CLOUDSUO_RELEASE_DATE',   '2024-08-23');
+define('CLOUDSUO_BUILD',          '20240806');
 
 // Change to TRUE for debugging
 define('DEBUG_MODE', TRUE);
@@ -122,8 +122,8 @@ include(PATH_HELPERS . 'tcp.class.php');
 include(PATH_HELPERS . 'dom.class.php');
 include(PATH_HELPERS . 'cookie.class.php');
 
-if (file_exists(PATH_KERNEL . 'bludit.pro.php')) {
-	include(PATH_KERNEL . 'bludit.pro.php');
+if (file_exists(PATH_KERNEL . 'cloudsuo.pro.php')) {
+	include(PATH_KERNEL . 'cloudsuo.pro.php');
 }
 
 // Objects
@@ -141,7 +141,7 @@ $syslog 	= new Syslog();
 
 // Base URL
 // The user can define the base URL.
-// Left empty if you want to Bludit try to detect the base URL.
+// Left empty if you want to Cloudsuo try to detect the base URL.
 $base = '';
 
 if (!empty($_SERVER['DOCUMENT_ROOT']) && !empty($_SERVER['SCRIPT_NAME']) && empty($base)) {

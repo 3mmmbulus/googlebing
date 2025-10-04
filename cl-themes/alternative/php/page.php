@@ -2,7 +2,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-8 mx-auto">
-				<!-- Load Bludit Plugins: Page Begin -->
+				<!-- Load Cloudsuo Plugins: Page Begin -->
 				<?php Theme::plugins('pageBegin'); ?>
 
 				<!-- Page title -->
@@ -38,7 +38,7 @@
 					<?php echo $page->content(); ?>
 				</div>
 
-				<!-- Load Bludit Plugins: Page End -->
+				<!-- Load Cloudsuo Plugins: Page End -->
 				<?php Theme::plugins('pageEnd'); ?>
 			</div>
 		</div>

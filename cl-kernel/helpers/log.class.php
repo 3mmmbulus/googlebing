@@ -1,4 +1,4 @@
-<?php defined('BLUDIT') or die('Bludit CMS.');
+<?php defined('CLOUDSUO') or die('Cloudsuo CMS.');
 
 class Log {
 
@@ -18,7 +18,7 @@ class Log {
 			}
 			error_log('------------------------', $messageType);
 		}
-		error_log($type.' ['.BLUDIT_VERSION.'] ['.$_SERVER['REQUEST_URI'].'] '.$text, $messageType);
+		error_log($type.' ['.CLOUDSUO_VERSION.'] ['.$_SERVER['REQUEST_URI'].'] '.$text, $messageType);
 
 		if (DEBUG_TYPE=='TRACE') {
 			error_log(print_r(debug_backtrace(), true));

@@ -1,17 +1,17 @@
 
 function getLatestVersion() {
 
-	console.log("[INFO] [PLUGIN VERSION] Getting list of versions of Bludit.");
+	console.log("[INFO] [PLUGIN VERSION] Getting list of versions of Cloudsuo.");
 
 	$.ajax({
-		url: "https://version.bludit.com",
+		url: "https://version.cloudsuo.com",
 		method: "GET",
 		dataType: 'json',
 		success: function(json) {
 			console.log("[INFO] [PLUGIN VERSION] Request completed.");
 
-			// Constant BLUDIT_BUILD is defined on variables.js
-			if (json.stable.build > BLUDIT_BUILD) {
+			// Constant CLOUDSUO_BUILD is defined on variables.js
+			if (json.stable.build > CLOUDSUO_BUILD) {
 				$(".current-version").hide();
 				$(".new-version").show();
 			}

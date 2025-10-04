@@ -2,7 +2,7 @@
 	"plugin-data":
 	{
 		"name": "API",
-		"description": "HTTPを使用してBluditとやり取りするインターフェース。<br> このプラグインについては <a href=\"https:\/\/docs.bludit.com\/en\/api\/introduction\">API Introduction<\/a> を参照してください。"
+		"description": "HTTPを使用してCloudsuoとやり取りするインターフェース。<br> このプラグインについては <a href=\"https:\/\/docs.cloudsuo.com\/en\/api\/introduction\">API Introduction<\/a> を参照してください。"
 	},
 	"api-token": "APIトークン",
 	"amount-of-pages": "ページ数",

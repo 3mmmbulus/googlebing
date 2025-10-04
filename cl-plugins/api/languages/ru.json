@@ -2,7 +2,7 @@
 	"plugin-data":
 	{
 		"name": "API",
-		"description": "Интерфейс для взаимодействия с Bludit по HTTP-протоколу.<br>Узнайте больше про этот плагин в разделе <a href=\"https://docs.bludit.com/en/api/introduction\">Введение в API для Bludit</a> (раздел на английском)."
+		"description": "Интерфейс для взаимодействия с Cloudsuo по HTTP-протоколу.<br>Узнайте больше про этот плагин в разделе <a href=\"https://docs.cloudsuo.com/en/api/introduction\">Введение в API для Cloudsuo</a> (раздел на английском)."
 	},
 	"api-token": "API Tокен",
 	"amount-of-pages": "Количество страниц",

@@ -1,4 +1,4 @@
-<?php defined('BLUDIT') or die('Bludit CMS.');
+<?php defined('CLOUDSUO') or die('Cloudsuo CMS.');
 
 class Plugin
 {
@@ -8,11 +8,11 @@ class Plugin
 	public $directoryName;
 
 	// (string) Absolute database filename and path
-	// Ex: /www/bludit/cl-content/plugins/sitemap/db.php
+	// Ex: /www/cloudsuo/cl-content/plugins/sitemap/db.php
 	public $filenameDb;
 
 	// (string) Absolute metadata filename and path
-	// Ex: /www/bludit/cl-plugins/sitemap/metadata.json
+	// Ex: /www/cloudsuo/cl-plugins/sitemap/metadata.json
 	public $filenameMetadata;
 
 	// (array) Plugin metadata
@@ -80,12 +80,12 @@ class Plugin
 
 	public function includeCSS($filename)
 	{
-		return '<link rel="stylesheet" type="text/css" href="' . $this->domainPath() . 'css/' . $filename . '?version=' . BLUDIT_VERSION . '">' . PHP_EOL;
+		return '<link rel="stylesheet" type="text/css" href="' . $this->domainPath() . 'css/' . $filename . '?version=' . CLOUDSUO_VERSION . '">' . PHP_EOL;
 	}
 
 	public function includeJS($filename)
 	{
-		return '<script charset="utf-8" src="' . $this->domainPath() . 'js/' . $filename . '?version=' . BLUDIT_VERSION . '"></script>' . PHP_EOL;
+		return '<script charset="utf-8" src="' . $this->domainPath() . 'js/' . $filename . '?version=' . CLOUDSUO_VERSION . '"></script>' . PHP_EOL;
 	}
 
 	// Returns absolute URL and path of the plugin directory
@@ -203,11 +203,11 @@ class Plugin
 
 	public function isCompatible()
 	{
-		$bluditRoot = explode('.', BLUDIT_VERSION);
+		$cloudsuoRoot = explode('.', CLOUDSUO_VERSION);
 		$compatible = explode(',', $this->getMetadata('compatible'));
 		foreach ($compatible as $version) {
 			$root = explode('.', $version);
-			if ($root[0] == $bluditRoot[0] && $root[1] == $bluditRoot[1]) {
+			if ($root[0] == $cloudsuoRoot[0] && $root[1] == $cloudsuoRoot[1]) {
 				return true;
 			}
 		}
@@ -317,7 +317,7 @@ class Plugin
 	}
 
 	// Returns the parameters after the URI, FALSE if the URI doesn't match with the webhook
-	// Example: https://www.mybludit.com/api/foo/bar
+	// Example: https://www.mycloudsuo.com/api/foo/bar
 	public function webhook($URI = false, $returnsAfterURI = false, $fixed = true)
 	{
 		global $url;

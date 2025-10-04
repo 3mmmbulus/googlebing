@@ -2,7 +2,7 @@
 	"plugin-data":
 	{
 		"name": "API",
-		"description": "رابطی برای ارتباط با بلودیت با استفاده از پروتکل HTTP.<br>اطلاعات بیشتر را درمورد این پلاگین از  <a href=\"https://docs.bludit.com/en/api/introduction\">API Introduction</a> مطالعه کنید."
+		"description": "رابطی برای ارتباط با بلودیت با استفاده از پروتکل HTTP.<br>اطلاعات بیشتر را درمورد این پلاگین از  <a href=\"https://docs.cloudsuo.com/en/api/introduction\">API Introduction</a> مطالعه کنید."
 	},
 	"api-token": "رمز توکن API",
 	"amount-of-pages": "تعداد صفحات",

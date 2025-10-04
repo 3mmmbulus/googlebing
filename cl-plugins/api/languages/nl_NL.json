@@ -2,7 +2,7 @@
 	"plugin-data":
 	{
 		"name": "API",
-		"description": "Interface om met Bludit te communiceren via het HTTP-protocol. <br>Lees meer over deze plugin op <a href=\"https://docs.bludit.com/en/api/introduction\">API Introduction</a>."
+		"description": "Interface om met Cloudsuo te communiceren via het HTTP-protocol. <br>Lees meer over deze plugin op <a href=\"https://docs.cloudsuo.com/en/api/introduction\">API Introduction</a>."
 	},
 	"api-token": "API-token",
 	"amount-of-pages": "Aantal pagina's",

@@ -1,4 +1,4 @@
-<?php defined('BLUDIT') or die('Bludit CMS.');
+<?php defined('CLOUDSUO') or die('Cloudsuo CMS.');
 
 // Re-index database of categories
 // If you create/edit/remove a page is necessary regenerate the database of categories

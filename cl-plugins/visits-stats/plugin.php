@@ -102,7 +102,7 @@ EOF;
 		$html .= '<div class="form-text">' . $L->get('This title is almost always used in the sidebar of the site') . '</div>';
 		$html .= '</div>';
 
-		if (defined('BLUDIT_PRO')) {
+		if (defined('CLOUDSUO_PRO')) {
 			$html .= '<div class="mb-3">';
 			$html .= '<label class="form-label" for="excludeAdmins">' . $L->get('Exclude administrators users') . '</label>';
 			$html .= '<select class="form-select" id="excludeAdmins" name="excludeAdmins">';
@@ -171,7 +171,7 @@ EOF;
 	// The line is a json array with the hash IP of the visitor and the time
 	public function addVisitor()
 	{
-		if (Cookie::get('BLUDIT-KEY') && defined('BLUDIT_PRO') && $this->getValue('excludeAdmins')) {
+		if (Cookie::get('CLOUDSUO-KEY') && defined('CLOUDSUO_PRO') && $this->getValue('excludeAdmins')) {
 			return false;
 		}
 		$currentTime = Date::current('Y-m-d H:i:s');

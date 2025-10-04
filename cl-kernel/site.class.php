@@ -1,4 +1,4 @@
-<?php defined('BLUDIT') or die('Bludit CMS.');
+<?php defined('CLOUDSUO') or die('Cloudsuo CMS.');
 
 class Site extends dbJSON
 {
@@ -312,7 +312,7 @@ class Site extends dbJSON
 	}
 
 	// Returns the full domain and base url
-	// For example, https://www.domain.com/bludit
+	// For example, https://www.domain.com/cloudsuo
 	public function url()
 	{
 		return $this->getField('url');
@@ -361,7 +361,7 @@ class Site extends dbJSON
 		return parse_url($url, PHP_URL_SCHEME) === 'https';
 	}
 
-	// Returns the current build / version of Bludit.
+	// Returns the current build / version of Cloudsuo.
 	public function currentBuild()
 	{
 		return $this->getField('currentBuild');

@@ -2,7 +2,7 @@
 	"plugin-data":
 	{
 		"name": "Remote Content",
-		"description": "Das Plugin snychronisiert die Inhalte eines Repository wie GitHub mit einer Bludit-Installation."
+		"description": "Das Plugin snychronisiert die Inhalte eines Repository wie GitHub mit einer Cloudsuo-Installation."
 	},
 	"webhook": "Webhook",
 	"source": "Quelle",
