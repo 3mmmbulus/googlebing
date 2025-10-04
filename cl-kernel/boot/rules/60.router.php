@@ -1,7 +1,7 @@
 <?php defined('CLOUDSUO') or die('Cloudsuo CMS.');
 
 // Redirect admin, from /admin to /admin/
-if ($url->uri()==HTML_PATH_ROOT.ADMIN_URI_FILTER) {
+if ($url->uri()==HTML_PATH_ROOT.$site->adminUriFilter()) {
 	Redirect::url(DOMAIN_ADMIN);
 }
 

@@ -377,6 +377,7 @@ function install($adminUsername, $adminPassword, $timezone)
 		'timezone' => $timezone,
 		'theme' => 'alternative',
 		'adminTheme' => 'booty',
+		'adminUriFilter' => 'admin',
 		'homepage' => '',
 		'pageNotFound' => '',
 		'uriPage' => '/',

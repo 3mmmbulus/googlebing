@@ -168,7 +168,7 @@ define('HTML_PATH_THEME',		HTML_PATH_THEMES . $site->theme() . '/');
 define('HTML_PATH_THEME_CSS',		HTML_PATH_THEME . 'css/');
 define('HTML_PATH_THEME_JS',		HTML_PATH_THEME . 'js/');
 define('HTML_PATH_THEME_IMG',		HTML_PATH_THEME . 'img/');
-define('HTML_PATH_ADMIN_ROOT',		HTML_PATH_ROOT . ADMIN_URI_FILTER . '/');
+define('HTML_PATH_ADMIN_ROOT',		HTML_PATH_ROOT . $site->adminUriFilter() . '/');
 define('HTML_PATH_ADMIN_THEME',		HTML_PATH_ROOT . 'cl-kernel/admin/themes/' . $site->adminTheme() . '/');
 define('HTML_PATH_ADMIN_THEME_JS',	HTML_PATH_ADMIN_THEME . 'js/');
 define('HTML_PATH_ADMIN_THEME_CSS',	HTML_PATH_ADMIN_THEME . 'css/');
@@ -244,7 +244,7 @@ define('DOMAIN_UPLOADS_THUMBNAILS',	DOMAIN . HTML_PATH_UPLOADS_THUMBNAILS);
 define('DOMAIN_PLUGINS',		DOMAIN . HTML_PATH_PLUGINS);
 define('DOMAIN_CONTENT',		DOMAIN . HTML_PATH_CONTENT);
 
-define('DOMAIN_ADMIN',			DOMAIN_BASE . ADMIN_URI_FILTER . '/');
+define('DOMAIN_ADMIN',			DOMAIN_BASE . $site->adminUriFilter() . '/');
 
 define('DOMAIN_TAGS',			Text::addSlashes(DOMAIN_BASE . TAG_URI_FILTER, false, true));
 define('DOMAIN_CATEGORIES',		Text::addSlashes(DOMAIN_BASE . CATEGORY_URI_FILTER, false, true));

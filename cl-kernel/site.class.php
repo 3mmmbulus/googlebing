@@ -50,7 +50,8 @@ class Site extends dbJSON
 		'thumbnailQuality' => 	100,
 		'logo' =>		'',
 		'markdownParser' =>	true,
-		'customFields' =>	'{}'
+		'customFields' =>	'{}',
+		'adminUriFilter' =>	'admin'
 	);
 
 	function __construct()
@@ -92,7 +93,7 @@ class Site extends dbJSON
 	// Also, you can get the a particular filter
 	public function uriFilters($filter = '')
 	{
-		$filters['admin'] = '/' . ADMIN_URI_FILTER . '/';
+		$filters['admin'] = '/' . $this->getField('adminUriFilter') . '/';
 		$filters['page'] = $this->getField('uriPage');
 		$filters['tag'] = $this->getField('uriTag');
 		$filters['category'] = $this->getField('uriCategory');
@@ -272,6 +273,12 @@ class Site extends dbJSON
 	public function adminTheme()
 	{
 		return $this->getField('adminTheme');
+	}
+
+	// Returns the admin URI filter
+	public function adminUriFilter()
+	{
+		return $this->getField('adminUriFilter');
 	}
 
 	// Returns the footer text
